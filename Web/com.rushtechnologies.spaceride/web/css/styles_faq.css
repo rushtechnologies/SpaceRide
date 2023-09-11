@@ -1,0 +1,95 @@
+/* 
+    Created on : 15/02/2019, 12:27:37 PM
+    Author     : CARLOSHG
+*/
+.fp{
+    color: #0B243B;
+    font-weight: 700;
+}
+.demo-card-wide.mdl-card {
+    z-index: 0;
+    position: relative;
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    opacity: 0.8;
+}
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link{
+    font-weight: 700;
+    color: #C54B23
+}
+.demo-card-wide > .mdl-card__title {
+    color: #C54B23;
+    z-index: 0;
+}
+.demo-card-wide > .mdl-card__supporting-text {
+    color: #FE5533;
+    z-index: 0;
+}
+.mdl-layout__header{
+    color: #FE5533;
+    background-color: #0B243B;
+    height: 5em;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-content: flex-start;
+}
+.mdl-layout__drawer, .mdl-layout__header-row .mdl-navigation__link, .mdl-layout__header .mdl-layout__drawer-button{
+    color: #FE5533;
+}
+.mdl-textfield__input,
+.mdl-textfield__label{
+    color: #0B243B;
+    font-weight: 700;
+}
+@media screen and (min-width: 840px){
+    mdl-textfield mdl-js-textfield mdl-textfield--floating-label{
+        width: 90%;
+    }
+}
+.mdl-textfield__input{
+    border-bottom: 2px solid rgba(0,50,120,.25);
+}
+.content{
+    background-image: url('../images/card.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    height: -webkit-fill-available;
+}
+.navigate{
+    background-color: #81DAF5;
+    color: #C54B23;
+}
+.answer{
+    position: static;
+    align-content: center;
+    color: #C23319;
+}
+.nosolution{
+    display: "none";
+}
+.chatlogin{
+    display: "none";
+}
+.footer{
+    position:  relative;
+    align-content: end;
+    top: 75%;
+}
+.dialogsr{
+    text-align: center;
+    align-content: center;
+    width: 70%;
+    top: 12%;
+    left: 10%;
+    right : 10%;
+    border-radius: 10px;
+    position: static;
+    z-index: 0;
+    display: none;
+    opacity: 0.8;
+    overflow-x:auto;
+}

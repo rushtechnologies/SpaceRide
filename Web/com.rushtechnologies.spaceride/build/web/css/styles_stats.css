@@ -1,0 +1,91 @@
+/* 
+    Created on : 5/11/2018, 09:26:36 PM
+    Author     : CARLOSHG
+*/
+.mdl-layout{
+    display: flex;
+    flex-flow: column;
+}
+.mdl-layout__header, h3, h5, h2{
+    color: #FE5533;
+}
+.mdl-layout__header{
+    background-color: #0B243B;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link,
+.mdl-layout__header-row .mdl-navigation__link, .mdl-layout__header .mdl-layout__drawer-button{
+    color: #FE5533;
+}
+.mdl-textfield__input,
+.mdl-textfield__label, h4, p{
+    color: #0B243B;
+    font-weight: 700;
+}
+.mdl-textfield__input{
+    border-bottom: 2px solid rgba(0,50,120,.25);
+}
+.mdl-layout__header {
+    background-color: #0B243B;
+    height: 5em;
+    position: inherit;
+}
+.navigate{
+    color: #FE5533;
+    background: url('../images/supp.jpg') center / cover;
+    font-weight: 500;
+}
+.dialogsr{
+    text-align: center;
+    align-content: center;
+    width: 70%;
+    top: 10%;
+    left: 10%;
+    right : 10%;
+    border-radius: 10px;
+    position: static;
+    z-index: 0;
+    display: none;
+    opacity: 0.8;
+    overflow-x:auto;
+}
+.actualizar{
+    display: none;
+}
+.admin{
+    display: none;
+}
+.fill{
+    height: calc(100% - 75em);
+}
+body{
+    background-image: url('../images/card.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.mdl-data-table {
+    border-radius: 10px;
+    opacity: 0.8;
+    margin: auto;
+    color: #0B243B;
+    font-weight: 700;
+    width: 90%;
+    white-space: normal;
+    overflow-x: auto;
+}
+.piechart_div{
+    margin: auto;
+    left: 5%;
+}
+.ertable{
+    width: 16.66%;
+    white-space: normal;
+}
+footer{
+    align-content: flex-end;
+}
+header{
+    align-content: flex-start
+}

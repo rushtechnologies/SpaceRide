@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<!--
+    @author: Carlos Huerta García <huerta2502@gmail.com>
+    @copyright: 2019 © Rush Technologies S.A. de C.V.
+    @description: HTML index web page
+-->
+
+<html>
+    <head>
+        <title>SpaceRide</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="description" content="The game your brain love."/>
+        <meta name="mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+        <meta name="msapplication-TileColor" content="#3372DF"/>
+        <meta name="apple-mobile-web-app-title" content="Space Ride"/>
+        <link rel="apple-touch-icon-precomposed" href="images/icono.png">
+        <link rel="shortcut icon" href="images/icono.png">
+        <link rel="icon" sizes="192x192" href="images/icono.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-deep_orange.min.css"/>
+        <link rel="stylesheet" href="css/styles_index.css"/>
+    </head>
+    <body onload="noback()">
+        <div class="demo-layout-transparent">
+            <header class="mdl-layout__header--transparent">
+                <br/>
+                <h1 class="title"><b>Space Ride</b></h1>
+                <div class="download">
+                    <div class="download-content tac">
+                        <h3><b>Descarga Space Ride</b></h3>
+                        <p class="download-content-p">Descarga el juego que amará tu cerebro. En este juego multijugador aprendes mientras juegas, respondiendo preguntas de conocimientos generales para ganar.</p>
+                        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--primary" href="#">Descarga</a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <main class="mdl-layout__content cardscontainer" style="width: 100%;">
+            <div class="mdl-grid ">
+                <div class="mdl-cell mdl-cell--6-col demo-card-wide mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title signin">
+                        <a name="register" id="register" href="#modal" class="mdl-card__title-text mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" onclick="modal();">Registrarse</a>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        ¿Nuevo en Space Ride? El juego que tu cerebro amará.
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button onclick="" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">share</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col demo-card-wide mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title login">
+                        <a name="inses" id="inses" href="#modal2" class="mdl-card__title-text mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" onclick="modal2();">Iniciar Sesión</a>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Revisa tus estadísticas de juego.
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button id="demo-menu-lower-right1"
+                                class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+                            <i class="material-icons">share</i>
+                        </button>
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                            for="demo-menu-lower-right1">
+                            <li class="mdl-menu__item"><a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost:8080/com.rushtechnologies.spaceride/" target="_blank" rel="noopener" aria-label="">
+                                    <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.38 0 0 5.38 0 12s5.38 12 12 12 12-5.38 12-12S18.62 0 12 0zm3.6 11.5h-2.1v7h-3v-7h-2v-2h2V8.34c0-1.1.35-2.82 2.65-2.82h2.35v2.3h-1.4c-.25 0-.6.13-.6.66V9.5h2.34l-.24 2z"/></svg>
+                                        </div>
+                                    </div>
+                                </a></li>
+                            <li class="mdl-menu__item"><a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Juega%20SpaceRide%20Ahora.&amp;url=http%3A%2F%2Flocalhost:8080/com.rushtechnologies.spaceride/" target="_blank" rel="noopener" aria-label="">
+                                    <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.38 0 0 5.38 0 12s5.38 12 12 12 12-5.38 12-12S18.62 0 12 0zm5.26 9.38v.34c0 3.48-2.64 7.5-7.48 7.5-1.48 0-2.87-.44-4.03-1.2 1.37.17 2.77-.2 3.9-1.08-1.16-.02-2.13-.78-2.46-1.83.38.1.8.07 1.17-.03-1.2-.24-2.1-1.3-2.1-2.58v-.05c.35.2.75.32 1.18.33-.7-.47-1.17-1.28-1.17-2.2 0-.47.13-.92.36-1.3C7.94 8.85 9.88 9.9 12.06 10c-.04-.2-.06-.4-.06-.6 0-1.46 1.18-2.63 2.63-2.63.76 0 1.44.3 1.92.82.6-.12 1.95-.27 1.95-.27-.35.53-.72 1.66-1.24 2.04z"/></svg>
+                                        </div>
+                                    </div>
+                                </a>
+                            <li class="mdl-menu__item"><a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;caption=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;content=http%3A%2F%2Fsharingbuttons.io&amp;canonicalUrl=http%3A%2F%2Fsharingbuttons.io&amp;shareSource=tumblr_share_button" target="_blank" rel="noopener" aria-label="Share on Tumblr">
+                                    <a class="resp-sharing-button__link" href="mailto:?subject=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;body=http%3A%2F%2Fsharingbuttons.io" target="_self" rel="noopener" aria-label="">
+                                        <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.38 0 0 5.38 0 12s5.38 12 12 12 12-5.38 12-12S18.62 0 12 0zm8 16c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v8z"/><path d="M17.9 8.18c-.2-.2-.5-.24-.72-.07L12 12.38 6.82 8.1c-.22-.16-.53-.13-.7.08s-.15.53.06.7l3.62 2.97-3.57 2.23c-.23.14-.3.45-.15.7.1.14.25.22.42.22.1 0 .18-.02.27-.08l3.85-2.4 1.06.87c.1.04.2.1.32.1s.23-.06.32-.1l1.06-.9 3.86 2.4c.08.06.17.1.26.1.17 0 .33-.1.42-.25.15-.24.08-.55-.15-.7l-3.57-2.22 3.62-2.96c.2-.2.24-.5.07-.72z"/></svg>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <li class="mdl-menu__item">
+                                        <a class="resp-sharing-button__link" href="whatsapp://send?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.%20http%3A%2F%2Fsharingbuttons.io" target="_blank" rel="noopener" aria-label="">
+                                            <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24"><path d="m12 0c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zm0 3.8c2.2 0 4.2 0.9 5.7 2.4 1.6 1.5 2.4 3.6 2.5 5.7 0 4.5-3.6 8.1-8.1 8.1-1.4 0-2.7-0.4-3.9-1l-4.4 1.1 1.2-4.2c-0.8-1.2-1.1-2.6-1.1-4 0-4.5 3.6-8.1 8.1-8.1zm0.1 1.5c-3.7 0-6.7 3-6.7 6.7 0 1.3 0.3 2.5 1 3.6l0.1 0.3-0.7 2.4 2.5-0.7 0.3 0.099c1 0.7 2.2 1 3.4 1 3.7 0 6.8-3 6.9-6.6 0-1.8-0.7-3.5-2-4.8s-3-2-4.8-2zm-3 2.9h0.4c0.2 0 0.4-0.099 0.5 0.3s0.5 1.5 0.6 1.7 0.1 0.2 0 0.3-0.1 0.2-0.2 0.3l-0.3 0.3c-0.1 0.1-0.2 0.2-0.1 0.4 0.2 0.2 0.6 0.9 1.2 1.4 0.7 0.7 1.4 0.9 1.6 1 0.2 0 0.3 0.001 0.4-0.099s0.5-0.6 0.6-0.8c0.2-0.2 0.3-0.2 0.5-0.1l1.4 0.7c0.2 0.1 0.3 0.2 0.5 0.3 0 0.1 0.1 0.5-0.099 1s-1 0.9-1.4 1c-0.3 0-0.8 0.001-1.3-0.099-0.3-0.1-0.7-0.2-1.2-0.4-2.1-0.9-3.4-3-3.5-3.1s-0.8-1.1-0.8-2.1c0-1 0.5-1.5 0.7-1.7s0.4-0.3 0.5-0.3z"/></svg>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col demo-card-wide mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title game">
+                        <a href="game.html" class="mdl-card__title-text mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" >Jugar</a>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Juega Spaceride.
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button onclick="" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">share</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col demo-card-wide mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title supp">
+                        <a href="faq.jsp" class="mdl-card__title-text mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" >Soporte</a>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Preguntas frecuentes y chat de asistencia.
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button onclick="" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">share</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <dialog id="modal" class="modal mdl-dialog tac">
+                <form action="Controller" method="post">
+                    <h4 class="mdl-dialog__title">Registro</h4>
+                    <div class="mdl-dialog__content">
+                        <p class="mdl-color-text--primary-dark" id="msjs"></p>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 90%">
+                            <input class="mdl-textfield__input" type="text" name="user" id="users" autocomplete="off" onkeypress="alpha()" pattern="[a-zA-Z]+(\s*[a-zA-Z]*)*[a-zA-Z]{1,50}$"/>
+                            <label class="mdl-textfield__label" for="users">Nombre (usuario)</label>
+                        </div>
+                        <div class="mdl-tooltip mdl-tooltip--large" for="users">Ingrese su nombre de usuario de máximo 50 caracteres.</div>
+                        <br/>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 90%">
+                            <input class="mdl-textfield__input" type="password" name="pass" id="passs" autocomplete="off" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"/>
+                            <label class="mdl-textfield__label" for="passs">Contraseña (mínimo 8 caracteres)</label>
+                        </div>
+                        <div class="mdl-tooltip mdl-tooltip--large" for="passs">Ingrese su contraseña de mínimo 8 caracteres, incluyendo caracteres espepciales y mayúsculas, máximo 50 caracteres.</div>
+                        <br/>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 90%">
+                            <input class="mdl-textfield__input" type="password" name="pass2" id="pass2s" autocomplete="off" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"/>
+                            <label class="mdl-textfield__label" for="pass2s">Repetir contraseña</label>
+                        </div>
+                        <div class="mdl-tooltip mdl-tooltip--large" for="pass2s">Repita la contraseña que ingresó previamente.</div>
+                        <br/>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 90%">
+                            <input class="mdl-textfield__input" type="email" name="mail" id="mails" autocomplete="off" onkeypress="email()" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            <label class="mdl-textfield__label" for="mails">Correo electrónico</label>
+                        </div>
+                        <div class="mdl-tooltip mdl-tooltip--large" for="mails">Ingrese su correo electrónico (xx@xx.xx) para contactarle en caso de ser necesario.</div>
+                        <br/>
+                        <center><div id="g-recaptcha" class="g-recaptcha" data-sitekey="6LdM9pEUAAAAALBEK1DUwfgdZQjMTVGDvr4YMBO-"></div></center>
+                        <input type="hidden" name="grec" value="" id="grec"/>
+                        <br/>
+                    </div>
+                    <div class="mdl-dialog__actions--full-width">
+                        <button type="submit" name="submitsr" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" value="SignIn" onclick="return Fsignin();">Registrarse</button>
+                        <button type="button" class="mdl-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent close" onclick="closemodal();">Cancelar</button>
+                    </div>
+                </form>
+            </dialog>
+            <dialog id="modal2" class="modal mdl-dialog tac">
+                <form action="Controller" method="post">
+                    <h4 class="mdl-dialog__title">Iniciar Sesión</h4>
+                    <div class="mdl-dialog__content">
+                        <p class="mdl-color-text--primary-dark" id="msjl"></p>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 90%">
+                            <input class="mdl-textfield__input" type="text" name="user" id="userl" onkeypress="alpha()" pattern="[a-zA-Z]+(\s*[a-zA-Z]*)*[a-zA-Z]"/>
+                            <label class="mdl-textfield__label" for="userl">Usuario</label>
+                        </div>
+                        <div class="mdl-tooltip mdl-tooltip--large" for="userl">Ingrese su nombre de usuario previamente registrado.</div>
+                        <br/>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 90%">
+                            <input class="mdl-textfield__input" type="password" name="pass" id="passl" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"/>
+                            <label class="mdl-textfield__label" for="passl">Contraseña</label>
+                        </div>
+                        <div class="mdl-tooltip mdl-tooltip--large" for="passl">Ingrese su contraseña.</div>
+                        <br/>
+                        <br/>
+                        <p id="fp">¿Olvidó su contraseña?</p>
+                        <div class="mdl-tooltip mdl-tooltip--large" for="fp">Intente ingresar su contraseña y de ser usuario podrá recuperar su contraseña.</div>
+                    </div>
+                    <div class="mdl-dialog__actions--full-width">
+                        <button type="submit" name="submitsr" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" value="LogIn" onclick="return Flogin();">Iniciar Sesión</button>
+                        <button type="button" class="mdl-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent close" onclick="closemodal2();">Cancelar</button>
+                    </div>
+                </form>
+            </dialog>
+        </main>
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer--left-section">
+                <ul class="mdl-mini-footer--link-list">
+                    <li><a href="about.html">Acerca de</a></li>
+                    <li><a href="game.html">Jugar</a></li>
+                    <li><a href="faq.jsp">Soporte</a></li>
+                </ul>
+            </div>
+            <div class="mdl-mini-footer--right-section">
+                <h6>Space Ride por Rush Techologies</h6>
+            </div>
+        </footer>
+        <div class="mdl-layout__obfuscator"></div>
+        <script type="text/javascript" src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script async defer src="https://www.google.com/recaptcha/api.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/spaceride.js"></script>
+    </body>
+</html>

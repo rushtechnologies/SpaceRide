@@ -1,0 +1,147 @@
+/* 
+    Created on : 20/02/2019, 11:17:33 AM
+    Author     : CARLOSHG
+*/
+.mdl-card__supporting-text {
+    color: #0B243B;
+    opacity: 0.8;
+    font-weight: 700;
+}
+.mdl-layout{
+    display: flex;
+    flex-flow: column;
+}
+.mdl-layout__header, h3, h5{
+    color: #FE5533;
+    align-content: flex-start;
+}
+.mdl-layout__header{
+    background-color: #0B243B;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link,
+.mdl-layout__header-row .mdl-navigation__link, .mdl-layout__header .mdl-layout__drawer-button{
+    color: #FE5533;
+}
+body,
+.mdl-textfield__input,
+.mdl-textfield__label, h4, p{
+    color: #0B243B;
+    font-weight: 700;
+}
+.mdl-textfield__input{
+    border-bottom: 2px solid rgba(0,50,120,.25);
+}
+.mdl-layout__header {
+    background-color: #0B243B;
+    height: 5em;
+    position: inherit;
+}
+.navigate{
+    color: #FE5533;
+    background: url('../images/supp.jpg') center / cover;
+}
+.maingame{
+    background: url('../images/modal.jpg') center / cover;
+    background-repeat: no-repeat;
+    align-content: center;
+}
+.mainchoose{
+    background: url('../images/bdgame.jpg') center / cover;
+    background-repeat: no-repeat;
+    align-content: center;
+    text-align: center;
+}
+footer{
+    align-content: flex-end;
+}
+.player1,
+.player2{
+    width: 50%;
+    text-align: center;
+    position: absolute;
+}
+.player2{
+    left: 50%;
+}
+.content{
+    align-content: flex-start;
+    height: 20em;
+}
+.content2{
+    align-content: flex-start;
+}
+.jugar{
+    align-content: flex-end;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+.fill{
+    height: calc(100% - 35em);
+}
+.demo-card-wide.mdl-card {
+    z-index: 0;
+    position: relative;
+    border-radius: 10px;
+}
+.demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 12em;
+    z-index: 0;
+}
+.demo-card-wide > .mdl-card__menu {
+    color: #fff;
+    z-index: 0;
+}
+.art{
+    background: url(../images/art.jpg) center / cover;
+}
+.astro{
+    background: url(../images/astro.jpg) center / cover;
+}
+.bio{
+    background: url(../images/bio.png) center / cover;
+}
+.ent{
+    background: url(../images/ent.jpg) center / cover;
+}
+.esp{
+    background: url(../images/esp.jpeg) center / cover;
+}
+.fis{
+    background: url(../images/fis.jpg) center / cover;
+}
+.geo{
+    background: url(../images/geo.jpg) center / cover;
+}
+.hmex{
+    background: url(../images/hmex.jpg) center / cover;
+}
+.huni{
+    background: url(../images/huni.jpg) center / cover;
+}
+.ing{
+    background: url(../images/ing.jpg) center / cover;
+}
+.mat{
+    background: url(../images/mat.jpg) center / cover;
+}
+.qui{
+    background: url(../images/qui.jpg) center / cover;
+}
+.ran{
+    background: url(../images/ran.jpg) center / cover;
+}
+.tec{
+    background: url(../images/tec.jpg) center / cover;
+}
+.tcen{
+    text-align: center;
+}
+@media screen and (max-width: 840px){
+    .c4{
+        width: calc(100% - 16px);
+    }
+}

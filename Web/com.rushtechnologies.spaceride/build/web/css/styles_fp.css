@@ -1,0 +1,23 @@
+/* 
+    Created on : 5/11/2018, 09:26:36 PM
+    Author     : CARLOSHG
+*/
+.dialogsr{
+    text-align: center;
+    align-content: center;
+    width: 70%;
+    top: 10%;
+    left: 10%;
+    right : 10%;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 0;
+    display: block;
+    opacity: 0.8;
+}
+body{
+    background-image: url('../images/card2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
