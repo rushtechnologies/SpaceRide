@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/spaceRide"
+            android:checkable="false"
+            android:icon="@drawable/play"
+            android:title="SpaceRide" />
+        <item android:id="@+id/stats"
+            android:checkable="false"
+            android:icon="@drawable/stats"
+            android:title="Datos de Juego" />
+        <item android:id="@+id/my_account"
+            android:checkable="false"
+            android:icon="@drawable/user"
+            android:title="Mi Cuenta" />
+        <item android:id="@+id/support"
+            android:checkable="false"
+            android:icon="@drawable/support"
+            android:title="Soporte" />
+        <item android:id="@+id/logout"
+            android:checkable="false"
+            android:icon="@drawable/logout"
+            android:title="Salir" />
+        <item android:id="@+id/event_reports"
+            android:checkable="false"
+            android:icon="@drawable/events"
+            android:title="Eventos">
+            <menu>
+                <item android:id="@+id/new_event"
+                    android:checkable="false"
+                    android:icon="@drawable/create"
+                    android:title="Nuevo Reporte" />
+                <item android:id="@+id/read_event"
+                    android:checkable="false"
+                    android:icon="@drawable/read"
+                    android:title="Mostrar Reportes" />
+                <item android:id="@+id/assign_event"
+                    android:checkable="false"
+                    android:icon="@drawable/post"
+                    android:title="Asignar Reporte" />
+                <item android:id="@+id/update_event"
+                    android:checkable="false"
+                    android:icon="@drawable/update"
+                    android:title="Resolver Reporte" />
+                <item android:id="@+id/delete_event"
+                    android:checkable="false"
+                    android:icon="@drawable/delete"
+                    android:title="Borrar Reporte" />
+            </menu>
+        </item>
+        <item android:id="@+id/maintenance_report"
+            android:checkable="false"
+            android:icon="@drawable/maintenance"
+            android:title="Mantenimiento">
+            <menu>
+                <item android:id="@+id/new_maintenance"
+                    android:checkable="false"
+                    android:icon="@drawable/create"
+                    android:title="Nuevo Reporte" />
+                <item android:id="@+id/read_maintenance"
+                    android:checkable="false"
+                    android:icon="@drawable/read"
+                    android:title="Mostrar Reportes" />
+                <item android:id="@+id/assign_maintenance"
+                    android:checkable="false"
+                    android:icon="@drawable/post"
+                    android:title="Asignar Reporte" />
+                <item android:id="@+id/update_maintenance"
+                    android:checkable="false"
+                    android:icon="@drawable/update"
+                    android:title="Resolver Reporte" />
+                <item android:id="@+id/delete_maintenance"
+                    android:checkable="false"
+                    android:icon="@drawable/delete"
+                    android:title="Borrar Reporte" />
+            </menu>
+        </item>
+        <item android:id="@+id/maintenance_list"
+            android:checkable="false"
+            android:icon="@drawable/manage"
+            android:title="Eventos a Mantenimiento" />
+    </group>
+</menu>

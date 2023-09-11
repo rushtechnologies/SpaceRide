@@ -1,0 +1,15 @@
+<?xml version ="1.0" encoding ="utf-8"?><!--  Learn More about how to use App Actions: https://developer.android.com/guide/actions/index.html -->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">192.168.1.65</domain>
+        <domain includeSubdomains="true">192.168.43.53</domain>
+        <domain includeSubdomains="true">192.168.30.113</domain>
+        <domain includeSubdomains="true">192.168.30.100</domain>
+        <domain includeSubdomains="true">192.168.30.116</domain>
+        <domain includeSubdomains="true">192.168.30.101</domain>
+        <domain includeSubdomains="true">192.168.100.18</domain>
+        <domain includeSubdomains="true">192.168.30.104</domain>
+        <domain includeSubdomains="true">192.168.15.8</domain>
+        <domain includeSubdomains="true">192.168.137.1</domain>
+    </domain-config>
+</network-security-config>

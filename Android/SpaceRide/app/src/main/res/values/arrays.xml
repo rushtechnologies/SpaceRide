@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="new_faq">
+        <item>Tema</item>
+        <item>Cuenta</item>
+        <item>Juego</item>
+        <item>Requerimientos</item>
+        <item>Seguridad</item>
+        <item>Otro</item>
+    </string-array>
+    <string-array name="assign_event">
+        <item>Responsable</item>
+        <item>Salvador</item>
+    </string-array>
+    <string-array name="assign_maintenance">
+        <item>Responsable</item>
+        <item>Rafael</item>
+    </string-array>
+</resources>

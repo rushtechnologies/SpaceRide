@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/logInOrSignIn_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Activities.LogInOrSignInActivity">
+
+    <ImageView
+        android:id="@+id/spaceride_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@+id/transcript"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/spaceride" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/login"
+        android:fontFamily="@font/bahnschrift"
+        android:text="@string/login"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/signin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/login_img"
+        app:layout_constraintTop_toBottomOf="@+id/transcript" />
+
+    <Button
+        android:id="@+id/signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/bahnschrift"
+        android:text="@string/signin"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/signin_img"
+        app:layout_constraintTop_toBottomOf="@+id/login" />
+
+    <ImageButton
+        android:id="@+id/login_img"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/login"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/login"
+        app:layout_constraintEnd_toStartOf="@+id/login"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/login"
+        app:srcCompat="@drawable/login" />
+
+    <ImageButton
+        android:id="@+id/signin_img"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/signin"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/signin"
+        app:layout_constraintEnd_toStartOf="@+id/signin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/signin"
+        app:srcCompat="@drawable/signin" />
+
+    <TextView
+        android:id="@+id/transcript"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/LOSDescription"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spaceride_logo" />
+
+</android.support.constraint.ConstraintLayout>

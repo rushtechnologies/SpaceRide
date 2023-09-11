@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="application.android.com.rushtechnologies.spaceride">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_security_config" >
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/network_security_config" />
+        <activity android:name=".Activities.Home.HomeOperatorActivity"></activity>
+        <activity android:name=".Activities.ForgottenPasswdActivity" />
+        <activity android:name=".Activities.Home.HomeManagerActivity" />
+        <activity android:name=".Activities.Home.HomeDeveloperActivity" />
+        <activity android:name=".Activities.Home.HomeEngineerActivity" />
+        <activity android:name=".Activities.Home.HomeEditorActivity" />
+        <activity android:name=".Activities.Home.HomeUserActivity" />
+        <activity android:name=".Activities.SigninActivity" />
+        <activity android:name=".Activities.LoginActivity" />
+        <activity android:name=".Activities.LogInOrSignInActivity" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

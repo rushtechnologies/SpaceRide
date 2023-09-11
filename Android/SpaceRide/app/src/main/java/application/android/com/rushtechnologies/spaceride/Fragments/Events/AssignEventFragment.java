@@ -1,0 +1,127 @@
+package application.android.com.rushtechnologies.spaceride.Fragments.Events;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import application.android.com.rushtechnologies.spaceride.App.Adapters.RecyclerView.AssignRecyclerViewAdapter;
+import application.android.com.rushtechnologies.spaceride.DAO.AccessEventReport;
+import application.android.com.rushtechnologies.spaceride.ImpDAO.ImpEventReport;
+import application.android.com.rushtechnologies.spaceride.Model.EventReport;
+import application.android.com.rushtechnologies.spaceride.Model.User;
+import application.android.com.rushtechnologies.spaceride.R;
+
+public class AssignEventFragment extends Fragment {
+    private List<EventReport> eventReports;
+    private List<String> reports = new ArrayList<>();
+    private List<Integer> ids = new ArrayList<>();
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+    private User user;
+    private boolean updated;
+    private OnAssignEventFragmentListener callback;
+
+    public AssignEventFragment() {
+    }
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_assign_event, container, false);
+        setUser(callback.getUser());
+        bindElements(view);
+        setView();
+        return view;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            callback = (OnAssignEventFragmentListener) context;
+        } catch (Exception ex) {
+            System.out.println("Error at AssignEventFragment: " + ex.getMessage());
+            throw new ClassCastException(context.toString() + "should implement OnFragmentInteractionListener");
+        }
+    }
+
+    private void bindElements(View view) {
+        getReports();
+        recyclerView = view.findViewById(R.id.recyclerView);
+        layoutManager = new LinearLayoutManager(this.getContext());
+        adapter = new AssignRecyclerViewAdapter(false, reports, ids, R.layout.recycler_view_item_assign, this.getContext(), new AssignRecyclerViewAdapter.OnAssignFragmentItemClickListener() {
+            @Override
+            public void onItemClick(String report, int id, String name, boolean maintenance, int i) {
+                int s_id = 3;
+                updateERChief(id, s_id);
+                if (updated) {
+                    callback.toast("Reporte de evento asignado a: " + name);
+                    getFragmentManager().beginTransaction().detach(AssignEventFragment.this).attach(AssignEventFragment.this).commit();
+                } else {
+                    callback.toast("Error al asignar reporte de evento");
+                }
+            }
+        });
+    }
+
+    private void setView() {
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+    }
+
+    private void getReports() {
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    eventReports = new ArrayList<>();
+                    final AccessEventReport ACCESS_EVENT = new ImpEventReport();
+                    eventReports = ACCESS_EVENT.readERSupport(user.getU_id());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("Error at readAllFaq: " + e.getMessage());
+                }
+            }
+        });
+        for (EventReport eventReport : eventReports) {
+            reports.add(eventReport.getER_Description());
+            ids.add(eventReport.getER_Id());
+        }
+    }
+
+    private void updateERChief(final int id, final int s_id) {
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    final AccessEventReport ACCESS_EVENT = new ImpEventReport();
+                    updated = ACCESS_EVENT.updateERChief(id, s_id);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("Error at updateERChief: " + e.getMessage());
+                }
+            }
+        });
+    }
+
+    public interface OnAssignEventFragmentListener {
+        User getUser();
+
+        void toast(String message);
+    }
+
+    private void setUser(User user) {
+        this.user = user;
+    }
+
+}
