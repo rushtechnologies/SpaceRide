@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-SpaceRide" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/SpaceRide"/>
+        <property name="wsdl-SpaceRide" location="xml-resources/web-service-references/SpaceRide/wsdl/localhost_8080/SpaceRide_WEB/SpaceRide.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/SpaceRide" destdir="${build.generated.dir}/jax-wsCache/SpaceRide" wsdl="${wsdl-SpaceRide}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/SpaceRide_WEB/SpaceRide?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-SpaceRide}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/SpaceRide"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/SpaceRide">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-SpaceRide" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/SpaceRide"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/webservice"/>
+    </target>
+    <target name="wsimport-client-Login" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Login"/>
+        <property name="wsdl-Login" location="xml-resources/web-service-references/Login/wsdl/localhost_8080/com.rushtechnologies.spaceride/Login.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Login" destdir="${build.generated.dir}/jax-wsCache/Login" wsdl="${wsdl-Login}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/com.rushtechnologies.spaceride/Login?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-Login}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Login"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Login">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Login" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/Login"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/rushtechnologies/spaceride/webservice"/>
+    </target>
+    <target name="wsimport-client-Read" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Read"/>
+        <property name="wsdl-Read" location="xml-resources/web-service-references/Read/wsdl/localhost_8080/com.rushtechnologies.spaceride/Read.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Read" destdir="${build.generated.dir}/jax-wsCache/Read" wsdl="${wsdl-Read}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/com.rushtechnologies.spaceride/Read?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-Read}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Read"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Read">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Read" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/Read"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/rushtechnologies/spaceride/webservice"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-SpaceRide, wsimport-client-Login, wsimport-client-Read"/>
+</project>
